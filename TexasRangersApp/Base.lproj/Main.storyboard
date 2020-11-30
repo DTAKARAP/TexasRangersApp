@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uKj-HQ-wSr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="aFR-ND-a59">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="uKj-HQ-wSr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QKd-Ze-fOX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="beQ-wq-QjF" kind="relationship" relationship="rootViewController" id="FH8-vV-WH1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sn1-0g-UE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1336" y="113"/>
+        </scene>
+        <!--Texas Rangers Table View Controller-->
+        <scene sceneID="3ZG-Hq-heB">
+            <objects>
+                <tableViewController id="beQ-wq-QjF" customClass="TexasRangersTableViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bqI-Tl-BNb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" rowHeight="140" id="oJt-Og-vlQ" customClass="TexasRangersTableViewCell" customModule="TexasRangersApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJt-Og-vlQ" id="fOX-oq-cia">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texas Rangers At Oakland Athlectics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6c-Rr-IGh">
+                                            <rect key="frame" x="147" y="30" width="259" height="38.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-jG-eUU">
+                                            <rect key="frame" x="147" y="73.5" width="251" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 13 Jun 2016 07:05 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-NA-9fI">
+                                            <rect key="frame" x="147" y="102.5" width="259" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-RJ-taf">
+                                            <rect key="frame" x="25" y="30" width="106" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="QNp-FH-Pfv"/>
+                                                <constraint firstAttribute="width" constant="106" id="RR5-62-rDV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amV-pQ-3Gk" userLabel="Favorite Btn">
+                                            <rect key="frame" x="7" y="15" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="ffa-mM-Jj8"/>
+                                                <constraint firstAttribute="width" constant="40" id="nh9-ha-eMJ"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large" renderingMode="template"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="favouriteAction:" destination="kd3-5d-7a2" eventType="touchUpInside" id="CNt-N0-g70"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cZs-NA-9fI" firstAttribute="leading" secondItem="9YI-jG-eUU" secondAttribute="leading" id="22m-oG-pQF"/>
+                                        <constraint firstItem="h6c-Rr-IGh" firstAttribute="top" secondItem="qk7-RJ-taf" secondAttribute="top" id="3tU-Sq-wc0"/>
+                                        <constraint firstAttribute="trailing" secondItem="9YI-jG-eUU" secondAttribute="trailing" constant="16" id="4UF-Lb-DxL"/>
+                                        <constraint firstItem="qk7-RJ-taf" firstAttribute="centerY" secondItem="fOX-oq-cia" secondAttribute="centerY" id="5OD-2O-n9L"/>
+                                        <constraint firstAttribute="trailing" secondItem="h6c-Rr-IGh" secondAttribute="trailing" constant="8" id="5eh-5K-Xbp"/>
+                                        <constraint firstItem="amV-pQ-3Gk" firstAttribute="leading" secondItem="fOX-oq-cia" secondAttribute="leading" constant="7" id="H5g-W4-qb9"/>
+                                        <constraint firstItem="amV-pQ-3Gk" firstAttribute="centerY" secondItem="fOX-oq-cia" secondAttribute="centerY" constant="-35" id="Jub-SI-5bR"/>
+                                        <constraint firstItem="cZs-NA-9fI" firstAttribute="top" secondItem="9YI-jG-eUU" secondAttribute="bottom" constant="8" id="SJD-YP-Zg1"/>
+                                        <constraint firstItem="9YI-jG-eUU" firstAttribute="top" secondItem="h6c-Rr-IGh" secondAttribute="bottom" constant="5" id="dne-z8-JwN"/>
+                                        <constraint firstItem="9YI-jG-eUU" firstAttribute="leading" secondItem="h6c-Rr-IGh" secondAttribute="leading" id="gAs-ab-1xu"/>
+                                        <constraint firstItem="h6c-Rr-IGh" firstAttribute="leading" secondItem="qk7-RJ-taf" secondAttribute="trailing" constant="16" id="gVf-zC-3rN"/>
+                                        <constraint firstAttribute="trailing" secondItem="cZs-NA-9fI" secondAttribute="trailing" constant="8" id="jAc-jH-Zaw"/>
+                                        <constraint firstItem="qk7-RJ-taf" firstAttribute="leading" secondItem="fOX-oq-cia" secondAttribute="leading" constant="25" id="jYW-cQ-vL7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="eventCityLabel" destination="9YI-jG-eUU" id="vgw-EI-f76"/>
+                                    <outlet property="eventDateTimeLabel" destination="cZs-NA-9fI" id="RDI-qu-5R6"/>
+                                    <outlet property="eventThumbNail" destination="qk7-RJ-taf" id="Fwg-T8-Sbs"/>
+                                    <outlet property="eventTitleLabel" destination="h6c-Rr-IGh" id="VDA-aE-kXj"/>
+                                    <outlet property="favouriteBtn" destination="amV-pQ-3Gk" id="VQG-Kc-lGY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="beQ-wq-QjF" id="yJj-0k-hk3"/>
+                            <outlet property="delegate" destination="beQ-wq-QjF" id="8Yw-0p-cJt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="x4A-48-yeD">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="WjE-Pe-oRD">
+                            <connections>
+                                <action selector="cancelAction:" destination="beQ-wq-QjF" id="2Nd-dh-3EO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjo-BI-NuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kd3-5d-7a2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-475.36231884057975" y="112.5"/>
+        </scene>
+        <!--Texas Rangers At Oakland Athletics-->
+        <scene sceneID="oB7-YX-is4">
+            <objects>
+                <viewController storyboardIdentifier="detailViewStoryBoardId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WBu-VV-2Fb" customClass="TexasRangersDetailViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ml-rs-Yh0" userLabel="Detail View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hue-hl-xS9">
+                                <rect key="frame" x="20" y="79" width="374" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="VXB-eW-tPD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland, CA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLR-iD-SEP">
+                                <rect key="frame" x="20" y="412" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 13 Jun 2016 07:05 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-kC-WDs">
+                                <rect key="frame" x="20" y="380" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khm-wm-kz8" userLabel="Gray Line View">
+                                <rect key="frame" x="0.0" y="49" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Pdp-kT-Hai"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zxG-9i-Ax6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="khm-wm-kz8" firstAttribute="top" secondItem="zxG-9i-Ax6" secondAttribute="top" constant="5" id="41Z-eN-xwJ"/>
+                            <constraint firstItem="hue-hl-xS9" firstAttribute="top" secondItem="zxG-9i-Ax6" secondAttribute="top" constant="35" id="5RJ-Ff-Ug9"/>
+                            <constraint firstItem="zxG-9i-Ax6" firstAttribute="trailing" secondItem="A2h-kC-WDs" secondAttribute="trailing" constant="20" id="8LM-8q-ceu"/>
+                            <constraint firstItem="khm-wm-kz8" firstAttribute="leading" secondItem="zxG-9i-Ax6" secondAttribute="leading" id="Cj1-ST-0MQ"/>
+                            <constraint firstItem="A2h-kC-WDs" firstAttribute="leading" secondItem="hue-hl-xS9" secondAttribute="leading" id="E4B-Nx-Nya"/>
+                            <constraint firstItem="zxG-9i-Ax6" firstAttribute="trailing" secondItem="khm-wm-kz8" secondAttribute="trailing" id="GBI-oz-bkE"/>
+                            <constraint firstItem="xLR-iD-SEP" firstAttribute="top" secondItem="A2h-kC-WDs" secondAttribute="bottom" constant="8" id="QLd-xT-1cs"/>
+                            <constraint firstItem="A2h-kC-WDs" firstAttribute="top" secondItem="hue-hl-xS9" secondAttribute="bottom" constant="20" id="YdI-rs-49V"/>
+                            <constraint firstItem="zxG-9i-Ax6" firstAttribute="trailing" secondItem="hue-hl-xS9" secondAttribute="trailing" constant="20" id="fwg-V8-v8u"/>
+                            <constraint firstItem="xLR-iD-SEP" firstAttribute="leading" secondItem="A2h-kC-WDs" secondAttribute="leading" id="ns4-Ry-hne"/>
+                            <constraint firstItem="hue-hl-xS9" firstAttribute="leading" secondItem="zxG-9i-Ax6" secondAttribute="leading" constant="20" id="r3l-AE-PFD"/>
+                            <constraint firstItem="zxG-9i-Ax6" firstAttribute="trailing" secondItem="xLR-iD-SEP" secondAttribute="trailing" constant="20" id="xQz-gC-hHR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Texas Rangers At Oakland Athletics" id="kcv-Og-fi8">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="PzG-6q-d04">
+                            <connections>
+                                <action selector="favouriteAction:" destination="WBu-VV-2Fb" id="2eL-kp-QY1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="xLR-iD-SEP" id="LbT-5x-LoI"/>
+                        <outlet property="dateTimeLabel" destination="A2h-kC-WDs" id="e9R-6P-EmQ"/>
+                        <outlet property="favoriteBtn" destination="PzG-6q-d04" id="8Eh-Ax-hqD"/>
+                        <outlet property="imageView" destination="hue-hl-xS9" id="BGE-ve-hUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4U-zq-P5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="113"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

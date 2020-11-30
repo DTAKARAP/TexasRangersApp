@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TexasRangersDetailViewController.designView(with:):TexasRangersTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageView">
+            </PersistentString>
+            <PersistentString
+               value = "dateTimeLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TexasRangersDetailViewController.awakeFromNib():TexasRangersTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TexasRangersTableViewController.tableView(_:numberOfRowsInSection:):TexasRangersTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.events.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
