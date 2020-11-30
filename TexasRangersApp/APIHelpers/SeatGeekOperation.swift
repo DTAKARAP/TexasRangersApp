@@ -10,7 +10,10 @@ import Foundation
 class SeatGeekOperation {
     
     class func fetchSearchResults(with searchString: String, completionHandler: @escaping (Events?) -> Void) {
-        guard let eventURL = URL(string: "https://api.seatgeek.com/2/events/?client_id=MjE0MDYxMTN8MTYwNjE2Njg5MC40NzkzNzc1&q=\(searchString)") else {
+        let urlString  = "https://api.seatgeek.com/2/events/?client_id=MjE0MDYxMTN8MTYwNjE2Njg5MC40NzkzNzc1&q=\(searchString)"
+        let formattedUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        
+        guard let eventURL = URL(string: formattedUrl) else {
             return
         }
         

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="beQ-wq-QjF" kind="relationship" relationship="rootViewController" id="FH8-vV-WH1"/>
+                        <segue destination="FQ0-Og-mUB" kind="relationship" relationship="rootViewController" id="aei-BZ-k90"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sn1-0g-UE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,103 +26,135 @@
             <point key="canvasLocation" x="-1336" y="113"/>
         </scene>
         <!--Texas Rangers Table View Controller-->
-        <scene sceneID="3ZG-Hq-heB">
+        <scene sceneID="doj-JA-IR2">
             <objects>
-                <tableViewController id="beQ-wq-QjF" customClass="TexasRangersTableViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bqI-Tl-BNb">
+                <viewController id="FQ0-Og-mUB" customClass="TexasRangersTableViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iJx-X6-FDN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" rowHeight="140" id="oJt-Og-vlQ" customClass="TexasRangersTableViewCell" customModule="TexasRangersApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJt-Og-vlQ" id="fOX-oq-cia">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texas Rangers At Oakland Athlectics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6c-Rr-IGh">
-                                            <rect key="frame" x="147" y="30" width="259" height="38.5"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-jG-eUU">
-                                            <rect key="frame" x="147" y="73.5" width="251" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 13 Jun 2016 07:05 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-NA-9fI">
-                                            <rect key="frame" x="147" y="102.5" width="259" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-RJ-taf">
-                                            <rect key="frame" x="25" y="30" width="106" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sK-hH-Fpy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qku-Z2-99T">
+                                        <rect key="frame" x="197" y="394" width="20" height="20"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="qku-Z2-99T" firstAttribute="centerY" secondItem="2sK-hH-Fpy" secondAttribute="centerY" id="1h4-lO-VJh"/>
+                                    <constraint firstItem="qku-Z2-99T" firstAttribute="centerX" secondItem="2sK-hH-Fpy" secondAttribute="centerX" id="7JX-F9-qqj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="99t-es-Xr6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" rowHeight="140" id="HQI-Zv-o4H" customClass="TexasRangersTableViewCell" customModule="TexasRangersApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HQI-Zv-o4H" id="Mc5-gQ-k87">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texas Rangers At Oakland Athlectics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1r-F2-f4J">
+                                                    <rect key="frame" x="147" y="30" width="259" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDQ-OP-ajg">
+                                                    <rect key="frame" x="147" y="73.5" width="251" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 13 Jun 2016 07:05 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQU-iV-Cqh">
+                                                    <rect key="frame" x="147" y="102.5" width="259" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XD0-2t-ipw">
+                                                    <rect key="frame" x="25" y="30" width="106" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="106" id="6ll-Oj-VNl"/>
+                                                        <constraint firstAttribute="height" constant="80" id="drW-n0-ZUz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjm-c9-sb6" userLabel="Favorite Btn">
+                                                    <rect key="frame" x="7" y="15" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="VHr-bT-1db"/>
+                                                        <constraint firstAttribute="width" constant="40" id="h6c-YB-UPA"/>
+                                                    </constraints>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large" renderingMode="template"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="QNp-FH-Pfv"/>
-                                                <constraint firstAttribute="width" constant="106" id="RR5-62-rDV"/>
+                                                <constraint firstItem="s1r-F2-f4J" firstAttribute="top" secondItem="XD0-2t-ipw" secondAttribute="top" id="0wR-vT-dc8"/>
+                                                <constraint firstItem="nQU-iV-Cqh" firstAttribute="leading" secondItem="fDQ-OP-ajg" secondAttribute="leading" id="89e-IT-ris"/>
+                                                <constraint firstAttribute="trailing" secondItem="fDQ-OP-ajg" secondAttribute="trailing" constant="16" id="8vN-pn-LhC"/>
+                                                <constraint firstItem="fDQ-OP-ajg" firstAttribute="leading" secondItem="s1r-F2-f4J" secondAttribute="leading" id="C6V-du-30K"/>
+                                                <constraint firstItem="XD0-2t-ipw" firstAttribute="leading" secondItem="Mc5-gQ-k87" secondAttribute="leading" constant="25" id="F0X-4T-peu"/>
+                                                <constraint firstItem="Rjm-c9-sb6" firstAttribute="centerY" secondItem="Mc5-gQ-k87" secondAttribute="centerY" constant="-35" id="U8M-WC-s0x"/>
+                                                <constraint firstItem="s1r-F2-f4J" firstAttribute="leading" secondItem="XD0-2t-ipw" secondAttribute="trailing" constant="16" id="ViY-GH-oQJ"/>
+                                                <constraint firstItem="fDQ-OP-ajg" firstAttribute="top" secondItem="s1r-F2-f4J" secondAttribute="bottom" constant="5" id="WSW-dg-fNX"/>
+                                                <constraint firstAttribute="trailing" secondItem="nQU-iV-Cqh" secondAttribute="trailing" constant="8" id="ZTm-Te-Xhg"/>
+                                                <constraint firstItem="nQU-iV-Cqh" firstAttribute="top" secondItem="fDQ-OP-ajg" secondAttribute="bottom" constant="8" id="gMo-lF-qnc"/>
+                                                <constraint firstAttribute="trailing" secondItem="s1r-F2-f4J" secondAttribute="trailing" constant="8" id="seW-kl-x8w"/>
+                                                <constraint firstItem="Rjm-c9-sb6" firstAttribute="leading" secondItem="Mc5-gQ-k87" secondAttribute="leading" constant="7" id="tzk-lf-pIi"/>
+                                                <constraint firstItem="XD0-2t-ipw" firstAttribute="centerY" secondItem="Mc5-gQ-k87" secondAttribute="centerY" id="vlB-CZ-P97"/>
                                             </constraints>
-                                        </imageView>
-                                        <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amV-pQ-3Gk" userLabel="Favorite Btn">
-                                            <rect key="frame" x="7" y="15" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="ffa-mM-Jj8"/>
-                                                <constraint firstAttribute="width" constant="40" id="nh9-ha-eMJ"/>
-                                            </constraints>
-                                            <state key="normal">
-                                                <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large" renderingMode="template"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="favouriteAction:" destination="kd3-5d-7a2" eventType="touchUpInside" id="CNt-N0-g70"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="cZs-NA-9fI" firstAttribute="leading" secondItem="9YI-jG-eUU" secondAttribute="leading" id="22m-oG-pQF"/>
-                                        <constraint firstItem="h6c-Rr-IGh" firstAttribute="top" secondItem="qk7-RJ-taf" secondAttribute="top" id="3tU-Sq-wc0"/>
-                                        <constraint firstAttribute="trailing" secondItem="9YI-jG-eUU" secondAttribute="trailing" constant="16" id="4UF-Lb-DxL"/>
-                                        <constraint firstItem="qk7-RJ-taf" firstAttribute="centerY" secondItem="fOX-oq-cia" secondAttribute="centerY" id="5OD-2O-n9L"/>
-                                        <constraint firstAttribute="trailing" secondItem="h6c-Rr-IGh" secondAttribute="trailing" constant="8" id="5eh-5K-Xbp"/>
-                                        <constraint firstItem="amV-pQ-3Gk" firstAttribute="leading" secondItem="fOX-oq-cia" secondAttribute="leading" constant="7" id="H5g-W4-qb9"/>
-                                        <constraint firstItem="amV-pQ-3Gk" firstAttribute="centerY" secondItem="fOX-oq-cia" secondAttribute="centerY" constant="-35" id="Jub-SI-5bR"/>
-                                        <constraint firstItem="cZs-NA-9fI" firstAttribute="top" secondItem="9YI-jG-eUU" secondAttribute="bottom" constant="8" id="SJD-YP-Zg1"/>
-                                        <constraint firstItem="9YI-jG-eUU" firstAttribute="top" secondItem="h6c-Rr-IGh" secondAttribute="bottom" constant="5" id="dne-z8-JwN"/>
-                                        <constraint firstItem="9YI-jG-eUU" firstAttribute="leading" secondItem="h6c-Rr-IGh" secondAttribute="leading" id="gAs-ab-1xu"/>
-                                        <constraint firstItem="h6c-Rr-IGh" firstAttribute="leading" secondItem="qk7-RJ-taf" secondAttribute="trailing" constant="16" id="gVf-zC-3rN"/>
-                                        <constraint firstAttribute="trailing" secondItem="cZs-NA-9fI" secondAttribute="trailing" constant="8" id="jAc-jH-Zaw"/>
-                                        <constraint firstItem="qk7-RJ-taf" firstAttribute="leading" secondItem="fOX-oq-cia" secondAttribute="leading" constant="25" id="jYW-cQ-vL7"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="eventCityLabel" destination="fDQ-OP-ajg" id="3yx-N6-hSv"/>
+                                            <outlet property="eventDateTimeLabel" destination="nQU-iV-Cqh" id="9nN-gs-Ayh"/>
+                                            <outlet property="eventThumbNail" destination="XD0-2t-ipw" id="HgR-pl-req"/>
+                                            <outlet property="eventTitleLabel" destination="s1r-F2-f4J" id="Din-kP-C2W"/>
+                                            <outlet property="favouriteBtn" destination="Rjm-c9-sb6" id="gq3-AT-gZz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="eventCityLabel" destination="9YI-jG-eUU" id="vgw-EI-f76"/>
-                                    <outlet property="eventDateTimeLabel" destination="cZs-NA-9fI" id="RDI-qu-5R6"/>
-                                    <outlet property="eventThumbNail" destination="qk7-RJ-taf" id="Fwg-T8-Sbs"/>
-                                    <outlet property="eventTitleLabel" destination="h6c-Rr-IGh" id="VDA-aE-kXj"/>
-                                    <outlet property="favouriteBtn" destination="amV-pQ-3Gk" id="VQG-Kc-lGY"/>
+                                    <outlet property="dataSource" destination="FQ0-Og-mUB" id="NDs-iI-gde"/>
+                                    <outlet property="delegate" destination="FQ0-Og-mUB" id="OOJ-dE-bKM"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="beQ-wq-QjF" id="yJj-0k-hk3"/>
-                            <outlet property="delegate" destination="beQ-wq-QjF" id="8Yw-0p-cJt"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="x4A-48-yeD">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="WjE-Pe-oRD">
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9qF-lF-Y9G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2sK-hH-Fpy" secondAttribute="bottom" id="0QA-xA-fVZ"/>
+                            <constraint firstItem="9qF-lF-Y9G" firstAttribute="trailing" secondItem="2sK-hH-Fpy" secondAttribute="trailing" id="BdI-iO-l3e"/>
+                            <constraint firstItem="2sK-hH-Fpy" firstAttribute="top" secondItem="9qF-lF-Y9G" secondAttribute="top" id="X5z-GG-mQl"/>
+                            <constraint firstItem="2sK-hH-Fpy" firstAttribute="leading" secondItem="9qF-lF-Y9G" secondAttribute="leading" id="sho-eX-bvt"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="RtS-WO-QAb">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="ehO-uj-BWn">
                             <connections>
-                                <action selector="cancelAction:" destination="beQ-wq-QjF" id="2Nd-dh-3EO"/>
+                                <action selector="cancelAction:" destination="FQ0-Og-mUB" id="PUm-4x-4s8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mjo-BI-NuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="kd3-5d-7a2" userLabel="Exit" sceneMemberID="exit"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="iJx-X6-FDN" id="Bi3-aD-Cpo"/>
+                        <outlet property="loadingContainerView" destination="2sK-hH-Fpy" id="eEZ-Pg-4gq"/>
+                        <outlet property="loadingView" destination="qku-Z2-99T" id="8wE-XF-sjU"/>
+                        <outlet property="tableView" destination="99t-es-Xr6" id="y98-in-Ypr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUh-ab-iQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475.36231884057975" y="112.5"/>
+            <point key="canvasLocation" x="-484" y="113"/>
         </scene>
         <!--Texas Rangers At Oakland Athletics-->
         <scene sceneID="oB7-YX-is4">
@@ -199,6 +231,9 @@
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

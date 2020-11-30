@@ -8,31 +8,44 @@
 import UIKit
 import Foundation
 
-class TexasRangersTableViewController: UITableViewController {
+class TexasRangersTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var loadingContainerView: UIView!
     
     var searchBar = UISearchBar()
     var viewModel = TexasRangersViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerView.bringSubviewToFront(loadingContainerView)
         setupSearchBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if viewModel.events.count > 0 {
-            tableView.reloadData()
+            showAnimatingView()
         }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func viewDidAppear(_ animated: Bool) {
+        if viewModel.events.count > 0 {
+            tableView.reloadData()
+            hideAnimatingView()
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.events.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellid") as? TexasRangersTableViewCell {
             cell.configureView(with: viewModel.events[indexPath.row])
             return cell
@@ -41,11 +54,11 @@ class TexasRangersTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showDetailView(viewModel.events[indexPath.row])
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
     
@@ -56,6 +69,7 @@ class TexasRangersTableViewController: UITableViewController {
     
     fileprivate func setupSearchBar() {
         searchBar.delegate = self
+        searchBar.placeholder = "Search events here"
         navigationItem.titleView = searchBar
     }
     
@@ -76,13 +90,31 @@ class TexasRangersTableViewController: UITableViewController {
     fileprivate func addEventsToFavourites(_ eventId: Int) {
         viewModel.addToFavourites(with: eventId)
     }
+    
+    fileprivate func showAnimatingView() {
+        containerView.bringSubviewToFront(loadingContainerView)
+        loadingView.startAnimating()
+    }
+    
+    fileprivate func hideAnimatingView() {
+        loadingView.stopAnimating()
+        containerView.bringSubviewToFront(tableView)
+    }
+    
+    fileprivate func hideTableView() {
+        containerView.bringSubviewToFront(loadingContainerView)
+        loadingView.stopAnimating()
+        tableView.reloadData()
+    }
 }
 
 extension TexasRangersTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        showAnimatingView()
         viewModel.fetchEvents(with: searchBar.text ?? "") { [weak self] (result) in
             if result {
                 DispatchQueue.main.async {
+                    self?.hideAnimatingView()
                     self?.hideKeyboard()
                     self?.tableView.reloadData()
                 }
@@ -90,6 +122,8 @@ extension TexasRangersTableViewController: UISearchBarDelegate {
                 let alert = UIAlertController(title: "No events found", message: "Please try again.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 DispatchQueue.main.async {
+                    self?.searchBar.text = ""
+                    self?.hideTableView()
                     self?.present(alert, animated: true)
                 }
             }
@@ -100,13 +134,15 @@ extension TexasRangersTableViewController: UISearchBarDelegate {
 class TexasRangersViewModel {
     
     var events = [EventDataModel]()
+    let persistentId = "favoriteIds"
     
     public func fetchEvents(with searchStr: String, completionHandler: @escaping (Bool) -> Void) {
         SeatGeekOperation.fetchSearchResults(with: searchStr) { [weak self] (response) in
-            if let events = response?.events, !events.isEmpty {
+            if let events = response?.events, events.count > 0 {
                 self?.events = self?.bindModel(with: events) ?? [EventDataModel]()
                 completionHandler(true)
             } else {
+                self?.events = [EventDataModel]()
                 completionHandler(false)
             }
         }
@@ -114,7 +150,7 @@ class TexasRangersViewModel {
     
     public func addToFavourites(with eventId: Int) {
         var localIds = [Int]()
-        if let ids = UserDefaults.standard.value(forKey: "favoriteIds") as? [Int] {
+        if let ids = UserDefaults.standard.value(forKey: persistentId) as? [Int] {
             localIds = ids
         }
         if localIds.contains(eventId) {
@@ -125,8 +161,8 @@ class TexasRangersViewModel {
             localIds.append(eventId)
         }
     
-        UserDefaults.standard.removeObject(forKey: "favoriteIds")
-        UserDefaults.standard.set(localIds, forKey: "favoriteIds")
+        UserDefaults.standard.removeObject(forKey: persistentId)
+        UserDefaults.standard.set(localIds, forKey: persistentId)
         
         let updatedEvents = events.map({ EventDataModel(eventId: $0.eventId, title: $0.title, eventImageUrl: $0.eventImageUrl, eventDateTimeUTC: $0.eventDateTimeUTC, eventDisplayLocation: $0.eventDisplayLocation, isFavouriteEvent: determineIfFavourite(with: $0.eventId)) })
         events = updatedEvents
@@ -152,7 +188,7 @@ class TexasRangersViewModel {
     }
     
     fileprivate func determineIfFavourite(with id: Int) -> Bool {
-        let localIds = UserDefaults.standard.value(forKey: "favoriteIds") as? [Int]
+        let localIds = UserDefaults.standard.value(forKey: persistentId) as? [Int]
         return localIds?.contains(id) ?? false
     }
 }
