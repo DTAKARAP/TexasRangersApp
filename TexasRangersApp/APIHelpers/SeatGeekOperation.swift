@@ -33,7 +33,6 @@ class SeatGeekOperation {
             }
             completionHandler(nil)
         }
-        
         task.resume()
     }
 }
