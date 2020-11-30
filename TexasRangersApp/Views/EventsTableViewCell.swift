@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TexasRangersTableViewCell: UITableViewCell {
+class EventsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventCityLabel: UILabel!

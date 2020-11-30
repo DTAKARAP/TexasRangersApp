@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1336" y="113"/>
         </scene>
-        <!--Texas Rangers Table View Controller-->
+        <!--Events Table View Controller-->
         <scene sceneID="doj-JA-IR2">
             <objects>
-                <viewController id="FQ0-Og-mUB" customClass="TexasRangersTableViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FQ0-Og-mUB" customClass="EventsTableViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJx-X6-FDN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" rowHeight="140" id="HQI-Zv-o4H" customClass="TexasRangersTableViewCell" customModule="TexasRangersApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellid" rowHeight="140" id="HQI-Zv-o4H" customClass="EventsTableViewCell" customModule="TexasRangersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HQI-Zv-o4H" id="Mc5-gQ-k87">
@@ -159,7 +159,7 @@
         <!--Texas Rangers At Oakland Athletics-->
         <scene sceneID="oB7-YX-is4">
             <objects>
-                <viewController storyboardIdentifier="detailViewStoryBoardId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WBu-VV-2Fb" customClass="TexasRangersDetailViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewStoryBoardId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WBu-VV-2Fb" customClass="EventsDetailViewController" customModule="TexasRangersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ml-rs-Yh0" userLabel="Detail View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

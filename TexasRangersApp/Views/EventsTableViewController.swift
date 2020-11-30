@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class TexasRangersTableViewController: UIViewController {
+class EventsTableViewController: UIViewController {
 
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
@@ -16,7 +16,7 @@ class TexasRangersTableViewController: UIViewController {
     @IBOutlet weak var loadingContainerView: UIView!
     
     var searchBar = UISearchBar()
-    var viewModel = TexasRangersViewModel()
+    var viewModel = EventsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class TexasRangersTableViewController: UIViewController {
     
     fileprivate func showDetailView(_ details: EventDataModel) {
         let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc: TexasRangersDetailViewController = sb.instantiateViewController(withIdentifier: "detailViewStoryBoardId") as? TexasRangersDetailViewController else {
+        guard let vc: EventsDetailViewController = sb.instantiateViewController(withIdentifier: "detailViewStoryBoardId") as? EventsDetailViewController else {
             return
         }
         vc.event = details
@@ -83,7 +83,7 @@ class TexasRangersTableViewController: UIViewController {
     }
 }
 
-extension TexasRangersTableViewController: UISearchBarDelegate {
+extension EventsTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         showAnimatingView()
         viewModel.fetchEvents(with: searchBar.text ?? "") { [weak self] (result) in
@@ -106,7 +106,7 @@ extension TexasRangersTableViewController: UISearchBarDelegate {
     }
 }
 
-extension TexasRangersTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension EventsTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -117,7 +117,7 @@ extension TexasRangersTableViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellid") as? TexasRangersTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellid") as? EventsTableViewCell {
             cell.configureView(with: viewModel.events[indexPath.row])
             return cell
         }

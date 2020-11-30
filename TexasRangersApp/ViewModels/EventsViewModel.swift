@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TexasRangersViewModel {
+class EventsViewModel {
     
     var events = [EventDataModel]()
     let persistentId = "favoriteIds"

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TexasRangersDetailViewController: UIViewController {
+class EventsDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!

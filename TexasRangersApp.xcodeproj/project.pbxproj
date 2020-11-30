@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D7E78C3256C610B00EFFFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E78C2256C610B00EFFFFC /* AppDelegate.swift */; };
 		3D7E78C5256C610B00EFFFFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E78C4256C610B00EFFFFC /* SceneDelegate.swift */; };
-		3D7E78C7256C610B00EFFFFC /* TexasRangersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E78C6256C610B00EFFFFC /* TexasRangersTableViewController.swift */; };
+		3D7E78C7256C610B00EFFFFC /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E78C6256C610B00EFFFFC /* EventsTableViewController.swift */; };
 		3D7E78CA256C610B00EFFFFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78C8256C610B00EFFFFC /* Main.storyboard */; };
 		3D7E78CC256C610F00EFFFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78CB256C610F00EFFFFC /* Assets.xcassets */; };
 		3D7E78CF256C610F00EFFFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78CD256C610F00EFFFFC /* LaunchScreen.storyboard */; };
@@ -18,9 +18,9 @@
 		3DAAD425256F4E5000CCCF31 /* SeatGeekOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAD424256F4E5000CCCF31 /* SeatGeekOperation.swift */; };
 		3DAAD42A256F51C100CCCF31 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAD429256F51C100CCCF31 /* ResponseModel.swift */; };
 		3DBA10072574A6690027D76D /* EventDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA10062574A6680027D76D /* EventDataModel.swift */; };
-		3DBA100C2574A6920027D76D /* TexasRangersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA100B2574A6920027D76D /* TexasRangersTableViewCell.swift */; };
-		3DBA10112574A6DA0027D76D /* TexasRangersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA10102574A6DA0027D76D /* TexasRangersDetailViewController.swift */; };
-		3DBA10162574A7080027D76D /* TexasRangersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA10152574A7080027D76D /* TexasRangersViewModel.swift */; };
+		3DBA100C2574A6920027D76D /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA100B2574A6920027D76D /* EventsTableViewCell.swift */; };
+		3DBA10112574A6DA0027D76D /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA10102574A6DA0027D76D /* EventsDetailViewController.swift */; };
+		3DBA10162574A7080027D76D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBA10152574A7080027D76D /* EventsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		3D7E78BF256C610B00EFFFFC /* TexasRangersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TexasRangersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7E78C2256C610B00EFFFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D7E78C4256C610B00EFFFFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D7E78C6256C610B00EFFFFC /* TexasRangersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexasRangersTableViewController.swift; sourceTree = "<group>"; };
+		3D7E78C6256C610B00EFFFFC /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		3D7E78C9256C610B00EFFFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D7E78CB256C610F00EFFFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7E78CE256C610F00EFFFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 		3DAAD424256F4E5000CCCF31 /* SeatGeekOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekOperation.swift; sourceTree = "<group>"; };
 		3DAAD429256F51C100CCCF31 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		3DBA10062574A6680027D76D /* EventDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataModel.swift; sourceTree = "<group>"; };
-		3DBA100B2574A6920027D76D /* TexasRangersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexasRangersTableViewCell.swift; sourceTree = "<group>"; };
-		3DBA10102574A6DA0027D76D /* TexasRangersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexasRangersDetailViewController.swift; sourceTree = "<group>"; };
-		3DBA10152574A7080027D76D /* TexasRangersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexasRangersViewModel.swift; sourceTree = "<group>"; };
+		3DBA100B2574A6920027D76D /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		3DBA10102574A6DA0027D76D /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
+		3DBA10152574A7080027D76D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +155,9 @@
 		3DBA0FFF2574A5F80027D76D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3DBA100B2574A6920027D76D /* TexasRangersTableViewCell.swift */,
-				3DBA10102574A6DA0027D76D /* TexasRangersDetailViewController.swift */,
-				3D7E78C6256C610B00EFFFFC /* TexasRangersTableViewController.swift */,
+				3DBA100B2574A6920027D76D /* EventsTableViewCell.swift */,
+				3DBA10102574A6DA0027D76D /* EventsDetailViewController.swift */,
+				3D7E78C6256C610B00EFFFFC /* EventsTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 		3DBA10002574A6080027D76D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3DBA10152574A7080027D76D /* TexasRangersViewModel.swift */,
+				3DBA10152574A7080027D76D /* EventsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -310,13 +310,13 @@
 			files = (
 				3DBA10072574A6690027D76D /* EventDataModel.swift in Sources */,
 				3DAAD425256F4E5000CCCF31 /* SeatGeekOperation.swift in Sources */,
-				3DBA10112574A6DA0027D76D /* TexasRangersDetailViewController.swift in Sources */,
-				3D7E78C7256C610B00EFFFFC /* TexasRangersTableViewController.swift in Sources */,
+				3DBA10112574A6DA0027D76D /* EventsDetailViewController.swift in Sources */,
+				3D7E78C7256C610B00EFFFFC /* EventsTableViewController.swift in Sources */,
 				3D7E78C3256C610B00EFFFFC /* AppDelegate.swift in Sources */,
 				3DAAD42A256F51C100CCCF31 /* ResponseModel.swift in Sources */,
-				3DBA10162574A7080027D76D /* TexasRangersViewModel.swift in Sources */,
+				3DBA10162574A7080027D76D /* EventsViewModel.swift in Sources */,
 				3D7E78C5256C610B00EFFFFC /* SceneDelegate.swift in Sources */,
-				3DBA100C2574A6920027D76D /* TexasRangersTableViewCell.swift in Sources */,
+				3DBA100C2574A6920027D76D /* EventsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
